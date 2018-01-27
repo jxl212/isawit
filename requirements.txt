@@ -2,6 +2,3 @@ pip
 setuptools
 Flask==0.12
 gunicorn==19.6.0
-
-cryptography
-pyopenssl
