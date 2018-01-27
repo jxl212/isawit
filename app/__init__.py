@@ -13,3 +13,8 @@ def webhook():
 	print(message)
 
 	return "ok", 200
+
+@app.route('/hello', methods=['GET'])
+def hello():
+
+	return "<html><body>Hello</body></html>"
