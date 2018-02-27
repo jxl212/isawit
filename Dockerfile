@@ -1,5 +1,5 @@
 # [START dockerfile]
-FROM python3.6
+FROM python:3.6.4-jessie
 
 # Install the fortunes binary from the debian repositories.
 RUN apt-get update && apt-get install -y fortunes libffi-dev python-dev gunicorn
