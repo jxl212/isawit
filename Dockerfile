@@ -13,9 +13,9 @@ RUN virtualenv /env -p python3.6
 ENV VIRTUAL_ENV /env
 ENV PATH /env/bin:$PATH
 
-ADD requirements.txt /app/
-RUN pip install -r requirements.txt
 ADD . /app/
 
-CMD python app.py & gunicorn -b :$PORT main:app
+RUN pip install -r /app/requirements.txt
+
+CMD python3 app.py & gunicorn -b :$PORT main:app
 # [END dockerfile]
